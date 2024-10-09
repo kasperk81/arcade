@@ -4,6 +4,7 @@
   <PropertyGroup>
     <ArcadeSdkBuildTasksAssembly Condition="'$(MSBuildRuntimeType)' != 'Core'">$(MSBuildThisFileDirectory)net472\Microsoft.DotNet.Arcade.Sdk.dll</ArcadeSdkBuildTasksAssembly>
     <ArcadeSdkBuildTasksAssembly Condition="'$(MSBuildRuntimeType)' == 'Core'">$(MSBuildThisFileDirectory)net9.0\Microsoft.DotNet.Arcade.Sdk.dll</ArcadeSdkBuildTasksAssembly>
+    <ArcadeSdkBuildTasksAssembly Condition="!Exists('$(ArcadeSdkBuildTasksAssembly')">$(MSBuildThisFileDirectory)net10.0\Microsoft.DotNet.Arcade.Sdk.dll</ArcadeSdkBuildTasksAssembly>
   </PropertyGroup>
 
 </Project>
